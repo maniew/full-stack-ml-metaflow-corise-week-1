@@ -38,6 +38,7 @@ class BSTFlow(FlowSpec):
         bst = xgb.Booster()
         bst.load_model("model.json")
         preds = bst.predict(dtest)
+        print("Preds =", preds)
         self.next(self.end)
 
     @step
